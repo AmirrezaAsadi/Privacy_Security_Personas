@@ -18,8 +18,6 @@ This collection contains personas from the research paper "What Do Personas Say 
 - 🏷️ **Category Filtering** - Filter personas by their classification type
 - 📱 **Responsive Design** - Works on desktop, tablet, and mobile devices
 - 🎯 **Interactive Cards** - Click on any persona for detailed information
-- 📊 **Real-time Statistics** - See counts update as you filter
-- 🎨 **Modern UI** - Clean, professional interface with smooth animations
 
 ## Usage
 
@@ -56,11 +54,6 @@ The persona data is extracted from 35 primary research papers identified through
 We welcome contributions to improve this collection:
 
 1. **Data Updates** - Submit corrections or additions to persona data
-2. **Feature Requests** - Suggest new functionality
-3. **Bug Reports** - Report any issues you encounter
-4. **Documentation** - Help improve these instructions
-
-Please submit issues and pull requests through GitHub.
 
 ## Citation
 
