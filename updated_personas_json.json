@@ -1,0 +1,1118 @@
+{
+  "metadata": {
+    "title": "Security & Privacy Personas Collection",
+    "description": "A comprehensive collection of 128 personas from security and privacy literature",
+    "source": "Systematic Literature Review: What Do Personas Say About Privacy & Security",
+    "totalPersonas": 128,
+    "categories": [
+      "Threat Actors",
+      "Security Practitioners", 
+      "Knowledge-Attitude Personas",
+      "Demographic Specific Persona of Regular Users",
+      "Industry Specific Personas"
+    ],
+    "lastUpdated": "2025-01-14"
+  },
+  "references": {
+    "matthews2019black": {
+      "title": "Black hat trolling, white hat trolling, and hacking the attention landscape",
+      "authors": ["Matthews, John"],
+      "year": 2019,
+      "type": "article"
+    },
+    "bhattarai2016information": {
+      "title": "Information security application design: understanding your users",
+      "authors": ["Bhattarai, Suraj"],
+      "year": 2016,
+      "type": "article"
+    },
+    "liang2015papdroid": {
+      "title": "PAPDroid: Personalization Awareness Privacy Protection in Android",
+      "authors": ["Liang, Xiaohong"],
+      "year": 2015,
+      "type": "article"
+    },
+    "tariq2012framing": {
+      "title": "Framing the attacker in organized cybercrime",
+      "authors": ["Tariq, Muhammad"],
+      "year": 2012,
+      "type": "article"
+    },
+    "tretow2023prototyping": {
+      "title": "Prototyping the Learning Analytics Dashboards of an Adaptive Learning Platform: Faculty Perceptions Versus Designers' Intentions",
+      "authors": ["Tretow, Anna"],
+      "year": 2023,
+      "type": "article"
+    },
+    "wodo2020security": {
+      "title": "Security of Digital Banking Systems in Poland: Users Study 2019",
+      "authors": ["Wodo, Wojciech"],
+      "year": 2020,
+      "type": "article"
+    },
+    "steele2008adversary": {
+      "title": "Adversary Centered Design: Threat Modeling Using Anti-Scenarios, Anti-Use Cases and Anti-Personas",
+      "authors": ["Steele, Robert"],
+      "year": 2008,
+      "type": "article"
+    },
+    "faily2021visualising": {
+      "title": "Visualising personas as goal models to find security tensions",
+      "authors": ["Faily, Shamal"],
+      "year": 2021,
+      "type": "article"
+    },
+    "bowles2007personification": {
+      "title": "The personification of reliability, safety, and security",
+      "authors": ["Bowles, John"],
+      "year": 2007,
+      "type": "article"
+    },
+    "dupree2018case": {
+      "title": "A case study of using grounded analysis as a requirement engineering method: Identifying personas that specify privacy and security tool users",
+      "authors": ["Dupree, Jennifer"],
+      "year": 2018,
+      "type": "article"
+    },
+    "dang2015demystifying": {
+      "title": "Demystifying online personas of Vietnamese young adults on Facebook: A Q-methodology approach",
+      "authors": ["Dang, Thy"],
+      "year": 2015,
+      "type": "article"
+    },
+    "toresson2020pisa": {
+      "title": "PISA: a privacy impact self-assessment app using personas to relate app behavior to risks to smartphone users",
+      "authors": ["Toresson, Lars"],
+      "year": 2020,
+      "type": "article"
+    },
+    "ferreira2022girls4cyber": {
+      "title": "Girls4cyber: A game to promote awareness and innovation in cybersecurity",
+      "authors": ["Ferreira, Ana"],
+      "year": 2022,
+      "type": "article"
+    },
+    "hazilov2020systematic": {
+      "title": "Systematic scenario creation for serious security-awareness games",
+      "authors": ["Hazilov, Emil"],
+      "year": 2020,
+      "type": "article"
+    },
+    "schufrin2022visual": {
+      "title": "Visual firewall log analysis-at the border between analytical and appealing",
+      "authors": ["Schufrin, Mark"],
+      "year": 2022,
+      "type": "article"
+    },
+    "stoll2008adapting": {
+      "title": "Adapting personas for use in security visualization design",
+      "authors": ["Stoll, John"],
+      "year": 2008,
+      "type": "article"
+    },
+    "paske2012follow": {
+      "title": "Follow you follow me: Using location tracking to mitigate multi-device privacy threats",
+      "authors": ["Paske, Michael"],
+      "year": 2012,
+      "type": "article"
+    },
+    "dempsey2022children": {
+      "title": "Children designing privacy warnings: Informing a set of design guidelines",
+      "authors": ["Dempsey, Sarah"],
+      "year": 2022,
+      "type": "article"
+    },
+    "mustafa2023pakistani": {
+      "title": "Pakistani Teens and Privacy-How Gender Disparities, Religion and Family Values Impact the Privacy Design Space",
+      "authors": ["Mustafa, Mariam"],
+      "year": 2023,
+      "type": "article"
+    },
+    "lewis2014says": {
+      "title": "Who says personas can't dance? The use of comic strips to design information security personas",
+      "authors": ["Lewis, Sarah"],
+      "year": 2014,
+      "type": "article"
+    },
+    "shechter2011cyber": {
+      "title": "Cyber Culture and Personnel Security: Report 2-Ethnographic Analysis of Second Life",
+      "authors": ["Shechter, Michael"],
+      "year": 2011,
+      "type": "article"
+    },
+    "atkinson2018your": {
+      "title": "Your WiFi is leaking: What do your mobile apps gossip about you?",
+      "authors": ["Atkinson, Sam"],
+      "year": 2018,
+      "type": "article"
+    },
+    "dev2023models": {
+      "title": "Models of applied privacy (MAP): A persona based approach to threat modeling",
+      "authors": ["Dev, Harsh"],
+      "year": 2023,
+      "type": "article"
+    },
+    "gulsoy2023robustness": {
+      "title": "Robustness of privacy-preserving collaborative recommenders against popularity bias problem",
+      "authors": ["Gulsoy, Berrin"],
+      "year": 2023,
+      "type": "article"
+    },
+    "hamel2023safeguarding": {
+      "title": "Safeguarding Healthcare: A Comprehensive Threat Analysis of Clinical Decision Support Systems",
+      "authors": ["Hamel, Laurent"],
+      "year": 2023,
+      "type": "article"
+    },
+    "nicholls2021financial": {
+      "title": "Financial cybercrime: A comprehensive survey of deep learning approaches to tackle the evolving financial crime landscape",
+      "authors": ["Nicholls, Joel"],
+      "year": 2021,
+      "type": "article"
+    },
+    "singh2014archetypes": {
+      "title": "Archetypes to Inform Information Security: The Organization Man and the Innovator",
+      "authors": ["Singh, Mandeep"],
+      "year": 2014,
+      "type": "article"
+    },
+    "muchagata2019dementia": {
+      "title": "Dementia and mHealth: On the Way to GDPR Compliance",
+      "authors": ["Muchagata, Joana"],
+      "year": 2019,
+      "type": "article"
+    },
+    "morrison2023recognising": {
+      "title": "Recognising diversity in older adults' cybersecurity needs",
+      "authors": ["Morrison, Brianna"],
+      "year": 2023,
+      "type": "article"
+    },
+    "sander2015ux": {
+      "title": "UX aspects of threat information sharing platforms: An examination & lessons learned using personas",
+      "authors": ["Sander, Tina"],
+      "year": 2015,
+      "type": "article"
+    },
+    "faily2014engaging": {
+      "title": "Engaging stakeholders in security design: An assumption-driven approach",
+      "authors": ["Faily, Shamal"],
+      "year": 2014,
+      "type": "article"
+    },
+    "maus2021privacy": {
+      "title": "Privacy personas for IoT-based health research: A privacy calculus approach",
+      "authors": ["Maus, Angela"],
+      "year": 2021,
+      "type": "article"
+    },
+    "mead2017crowd": {
+      "title": "Crowd sourcing the creation of personae non gratae for requirements-phase threat modeling",
+      "authors": ["Mead, Nancy"],
+      "year": 2017,
+      "type": "article"
+    },
+    "6547622": {
+      "title": "Meet Elaine: A Persona-Driven Approach to Exploring Architecturally Significant Requirements",
+      "authors": ["Cleland-Huang, Jane"],
+      "year": 2013,
+      "type": "conference"
+    },
+    "morton2014desperately": {
+      "title": "Desperately seeking assurances: Segmenting users by their information-seeking preferences",
+      "authors": ["Morton, Angela", "Sasse, M. Angela"],
+      "year": 2014,
+      "type": "article"
+    }
+  },
+  "personas": [
+    {
+      "id": "P8-4",
+      "name": "Rick (Plant Operator)",
+      "category": "Industry Specific Personas",
+      "description": "Industrial control systems operator with security responsibilities in critical infrastructure",
+      "attributes": ["Industrial systems", "Critical infrastructure", "Operational security", "Safety focus"],
+      "source": "P8",
+      "reference": "faily2021visualising",
+      "context": "Security tensions visualization",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Faily, Shamal. 'Visualising personas as goal models to find security tensions.' 2021."
+    },
+    {
+      "id": "P9-1",
+      "name": "Scott Young (Tech-Savvy Student)",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Technically proficient student with high technology adoption and digital native behavior",
+      "attributes": ["High tech literacy", "Student status", "Digital native", "Early adopter"],
+      "source": "P9",
+      "reference": "bowles2007personification",
+      "context": "Software reliability and security design",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Bowles, John. 'The personification of reliability, safety, and security.' 2007."
+    },
+    {
+      "id": "P9-2",
+      "name": "Helen Davis (Elderly Novice User)",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Senior user with limited technical experience and support needs for basic computing",
+      "attributes": ["Limited tech experience", "Senior demographic", "Support needs", "Basic computing"],
+      "source": "P9",
+      "reference": "bowles2007personification",
+      "context": "Software reliability and security design",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Bowles, John. 'The personification of reliability, safety, and security.' 2007."
+    },
+    {
+      "id": "P9-3",
+      "name": "Robert McGinnis (Online Shopper)",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "E-commerce focused user with online purchasing behaviors and payment security concerns",
+      "attributes": ["E-commerce focus", "Online purchasing", "Payment security", "Consumer behavior"],
+      "source": "P9",
+      "reference": "bowles2007personification",
+      "context": "Software reliability and security design",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Bowles, John. 'The personification of reliability, safety, and security.' 2007."
+    },
+    {
+      "id": "P10-1",
+      "name": "Mark (Marginally Aware)",
+      "category": "Knowledge-Attitude Personas",
+      "description": "User with low knowledge and low motivation for security practices",
+      "attributes": ["Low knowledge", "Low motivation", "Minimal security practices", "Reactive approach"],
+      "source": "P10",
+      "reference": "dupree2018case",
+      "context": "Privacy and security tool user identification",
+      "methodology": "Interview",
+      "fullCitation": "Dupree, Jennifer. 'A case study of using grounded analysis as a requirement engineering method: Identifying personas that specify privacy and security tool users.' 2018."
+    },
+    {
+      "id": "P10-2",
+      "name": "Robert (Fundamentalist)",
+      "category": "Knowledge-Attitude Personas",
+      "description": "User with strong security beliefs and rigid practices following strict protocols",
+      "attributes": ["Strong beliefs", "Rigid practices", "Strict protocols", "Security fundamentalism"],
+      "source": "P10",
+      "reference": "dupree2018case",
+      "context": "Privacy and security tool user identification",
+      "methodology": "Interview",
+      "fullCitation": "Dupree, Jennifer. 'A case study of using grounded analysis as a requirement engineering method: Identifying personas that specify privacy and security tool users.' 2018."
+    },
+    {
+      "id": "P10-3",
+      "name": "Allison (Struggling Amateur)",
+      "category": "Knowledge-Attitude Personas",
+      "description": "User attempting security practices but struggling with implementation and understanding",
+      "attributes": ["Implementation struggles", "Learning difficulties", "Inconsistent practices", "Good intentions"],
+      "source": "P10",
+      "reference": "dupree2018case",
+      "context": "Privacy and security tool user identification",
+      "methodology": "Interview",
+      "fullCitation": "Dupree, Jennifer. 'A case study of using grounded analysis as a requirement engineering method: Identifying personas that specify privacy and security tool users.' 2018."
+    },
+    {
+      "id": "P10-4",
+      "name": "Patricia (Technician)",
+      "category": "Knowledge-Attitude Personas",
+      "description": "Technically competent user with systematic security approach and methodical practices",
+      "attributes": ["Technical competence", "Systematic approach", "Methodical practices", "Professional attitude"],
+      "source": "P10",
+      "reference": "dupree2018case",
+      "context": "Privacy and security tool user identification",
+      "methodology": "Interview",
+      "fullCitation": "Dupree, Jennifer. 'A case study of using grounded analysis as a requirement engineering method: Identifying personas that specify privacy and security tool users.' 2018."
+    },
+    {
+      "id": "P10-5",
+      "name": "Henry (Lazy Expert)",
+      "category": "Knowledge-Attitude Personas",
+      "description": "Highly knowledgeable user with low motivation to implement security measures",
+      "attributes": ["High knowledge", "Low motivation", "Expertise without action", "Complacency risk"],
+      "source": "P10",
+      "reference": "dupree2018case",
+      "context": "Privacy and security tool user identification",
+      "methodology": "Interview",
+      "fullCitation": "Dupree, Jennifer. 'A case study of using grounded analysis as a requirement engineering method: Identifying personas that specify privacy and security tool users.' 2018."
+    },
+    {
+      "id": "P11-1",
+      "name": "Outgoing Connector",
+      "category": "Knowledge-Attitude Personas",
+      "description": "Social media user focused on building connections and expanding networks",
+      "attributes": ["Social networking", "Connection building", "Open sharing", "Network expansion"],
+      "source": "P11",
+      "reference": "dang2015demystifying",
+      "context": "Vietnamese young adults' Facebook personas",
+      "methodology": "Q-methodology",
+      "fullCitation": "Dang, Thy. 'Demystifying online personas of Vietnamese young adults on Facebook: A Q-methodology approach.' 2015."
+    },
+    {
+      "id": "P11-2",
+      "name": "Reserved Trustor",
+      "category": "Knowledge-Attitude Personas",
+      "description": "Cautious social media user with selective sharing patterns and privacy awareness",
+      "attributes": ["Cautious behavior", "Selective sharing", "Privacy awareness", "Trust management"],
+      "source": "P11",
+      "reference": "dang2015demystifying",
+      "context": "Vietnamese young adults' Facebook personas",
+      "methodology": "Q-methodology",
+      "fullCitation": "Dang, Thy. 'Demystifying online personas of Vietnamese young adults on Facebook: A Q-methodology approach.' 2015."
+    },
+    {
+      "id": "P11-3",
+      "name": "Threats Perceiver",
+      "category": "Knowledge-Attitude Personas",
+      "description": "Security-conscious user with high threat awareness and protective behaviors",
+      "attributes": ["High threat awareness", "Security consciousness", "Protective behaviors", "Risk perception"],
+      "source": "P11",
+      "reference": "dang2015demystifying",
+      "context": "Vietnamese young adults' Facebook personas",
+      "methodology": "Q-methodology",
+      "fullCitation": "Dang, Thy. 'Demystifying online personas of Vietnamese young adults on Facebook: A Q-methodology approach.' 2015."
+    },
+    {
+      "id": "P12-1",
+      "name": "Lina Odinsson (E-sports Celebrity)",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "High-profile gaming personality with public exposure concerns and privacy challenges",
+      "attributes": ["Public figure", "Gaming focus", "Privacy challenges", "Celebrity status"],
+      "source": "P12",
+      "reference": "toresson2020pisa",
+      "context": "Smartphone privacy risk assessment",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Toresson, Lars. 'PISA: a privacy impact self-assessment app using personas to relate app behavior to risks to smartphone users.' 2020."
+    },
+    {
+      "id": "P12-2",
+      "name": "Carl Göransson (Elderly Citizen)",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Senior citizen with traditional privacy expectations and limited digital literacy",
+      "attributes": ["Senior demographic", "Traditional privacy", "Limited digital literacy", "Conservative approach"],
+      "source": "P12",
+      "reference": "toresson2020pisa",
+      "context": "Smartphone privacy risk assessment",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Toresson, Lars. 'PISA: a privacy impact self-assessment app using personas to relate app behavior to risks to smartphone users.' 2020."
+    },
+    {
+      "id": "P12-3",
+      "name": "Markus Petersson (Professional)",
+      "category": "Industry Specific Personas",
+      "description": "Business professional with work-life privacy boundaries and corporate security needs",
+      "attributes": ["Business professional", "Work-life boundaries", "Corporate security", "Professional needs"],
+      "source": "P12",
+      "reference": "toresson2020pisa",
+      "context": "Smartphone privacy risk assessment",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Toresson, Lars. 'PISA: a privacy impact self-assessment app using personas to relate app behavior to risks to smartphone users.' 2020."
+    },
+    {
+      "id": "P12-4",
+      "name": "Anders Andersson (Politician)",
+      "category": "Industry Specific Personas",
+      "description": "Political figure with high-stakes privacy requirements and public scrutiny concerns",
+      "attributes": ["Political figure", "High-stakes privacy", "Public scrutiny", "Reputation management"],
+      "source": "P12",
+      "reference": "toresson2020pisa",
+      "context": "Smartphone privacy risk assessment",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Toresson, Lars. 'PISA: a privacy impact self-assessment app using personas to relate app behavior to risks to smartphone users.' 2020."
+    },
+    {
+      "id": "P12-5",
+      "name": "Sandra Dalagren (Teen)",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Teenage user with social media-centric privacy concerns and peer influence",
+      "attributes": ["Teen demographic", "Social media focus", "Peer influence", "Privacy learning"],
+      "source": "P12",
+      "reference": "toresson2020pisa",
+      "context": "Smartphone privacy risk assessment",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Toresson, Lars. 'PISA: a privacy impact self-assessment app using personas to relate app behavior to risks to smartphone users.' 2020."
+    },
+    {
+      "id": "P13-1",
+      "name": "Matilde (Game Player)",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Gaming-focused user developing cybersecurity awareness through interactive learning",
+      "attributes": ["Gaming focus", "Cybersecurity learning", "Interactive engagement", "Skill development"],
+      "source": "P13",
+      "reference": "ferreira2022girls4cyber",
+      "context": "Cybersecurity awareness game for children",
+      "methodology": "Workshop",
+      "fullCitation": "Ferreira, Ana. 'Girls4cyber: A game to promote awareness and innovation in cybersecurity.' 2022."
+    },
+    {
+      "id": "P14-1",
+      "name": "Vivienne (Tech Consultant)",
+      "category": "Industry Specific Personas",
+      "description": "External technology consultant with broad system access and client responsibilities",
+      "attributes": ["External consultant", "Broad access", "Client responsibilities", "Technical expertise"],
+      "source": "P14",
+      "reference": "hazilov2020systematic",
+      "context": "Security awareness game design",
+      "methodology": "Mixed methods",
+      "fullCitation": "Hazilov, Emil. 'Systematic scenario creation for serious security-awareness games.' 2020."
+    },
+    {
+      "id": "P14-2",
+      "name": "Linda (Assistant)",
+      "category": "Industry Specific Personas",
+      "description": "Administrative support role with limited technical background but system access",
+      "attributes": ["Administrative role", "Limited tech background", "System access", "Support functions"],
+      "source": "P14",
+      "reference": "hazilov2020systematic",
+      "context": "Security awareness game design",
+      "methodology": "Mixed methods",
+      "fullCitation": "Hazilov, Emil. 'Systematic scenario creation for serious security-awareness games.' 2020."
+    },
+    {
+      "id": "P14-3",
+      "name": "Niko (Intern)",
+      "category": "Industry Specific Personas",
+      "description": "Temporary employee with learning-focused security needs and limited experience",
+      "attributes": ["Temporary status", "Learning focus", "Limited experience", "Training needs"],
+      "source": "P14",
+      "reference": "hazilov2020systematic",
+      "context": "Security awareness game design",
+      "methodology": "Mixed methods",
+      "fullCitation": "Hazilov, Emil. 'Systematic scenario creation for serious security-awareness games.' 2020."
+    },
+    {
+      "id": "P14-4",
+      "name": "Tom (Partner)",
+      "category": "Industry Specific Personas",
+      "description": "Senior business partner with strategic security concerns and decision-making authority",
+      "attributes": ["Senior partner", "Strategic concerns", "Decision authority", "Business focus"],
+      "source": "P14",
+      "reference": "hazilov2020systematic",
+      "context": "Security awareness game design",
+      "methodology": "Mixed methods",
+      "fullCitation": "Hazilov, Emil. 'Systematic scenario creation for serious security-awareness games.' 2020."
+    },
+    {
+      "id": "P14-5",
+      "name": "Barbara (Project Lead)",
+      "category": "Industry Specific Personas",
+      "description": "Project management role balancing security and productivity requirements",
+      "attributes": ["Project management", "Security-productivity balance", "Team coordination", "Deadline pressure"],
+      "source": "P14",
+      "reference": "hazilov2020systematic",
+      "context": "Security awareness game design",
+      "methodology": "Mixed methods",
+      "fullCitation": "Hazilov, Emil. 'Systematic scenario creation for serious security-awareness games.' 2020."
+    },
+    {
+      "id": "P14-6",
+      "name": "Gabriele (CFO)",
+      "category": "Industry Specific Personas",
+      "description": "Financial executive with high-value data access and regulatory compliance concerns",
+      "attributes": ["Financial executive", "High-value data", "Regulatory compliance", "Risk management"],
+      "source": "P14",
+      "reference": "hazilov2020systematic",
+      "context": "Security awareness game design",
+      "methodology": "Mixed methods",
+      "fullCitation": "Hazilov, Emil. 'Systematic scenario creation for serious security-awareness games.' 2020."
+    },
+    {
+      "id": "P14-7",
+      "name": "Hans (Head of IT)",
+      "category": "Security Practitioners",
+      "description": "IT leadership role with comprehensive security oversight and technical responsibility",
+      "attributes": ["IT leadership", "Security oversight", "Technical responsibility", "Strategic planning"],
+      "source": "P14",
+      "reference": "hazilov2020systematic",
+      "context": "Security awareness game design",
+      "methodology": "Mixed methods",
+      "fullCitation": "Hazilov, Emil. 'Systematic scenario creation for serious security-awareness games.' 2020."
+    },
+    {
+      "id": "P15-1",
+      "name": "Information Security Officer",
+      "category": "Security Practitioners",
+      "description": "Dedicated security professional managing organizational risk and security policies",
+      "attributes": ["Security management", "Risk assessment", "Policy development", "Compliance oversight"],
+      "source": "P15",
+      "reference": "schufrin2022visual",
+      "context": "Visual firewall log analysis interface design",
+      "methodology": "Mixed methods",
+      "fullCitation": "Schufrin, Mark. 'Visual firewall log analysis-at the border between analytical and appealing.' 2022."
+    },
+    {
+      "id": "P15-2",
+      "name": "Network Analyst",
+      "category": "Security Practitioners",
+      "description": "Technical professional analyzing network security patterns and traffic monitoring",
+      "attributes": ["Network analysis", "Traffic monitoring", "Pattern recognition", "Technical analysis"],
+      "source": "P15",
+      "reference": "schufrin2022visual",
+      "context": "Visual firewall log analysis interface design",
+      "methodology": "Mixed methods",
+      "fullCitation": "Schufrin, Mark. 'Visual firewall log analysis-at the border between analytical and appealing.' 2022."
+    },
+    {
+      "id": "P16-1",
+      "name": "Frank Kreuse (Cyber Analyst)",
+      "category": "Security Practitioners",
+      "description": "Cybersecurity analysis specialist with threat intelligence focus and analytical skills",
+      "attributes": ["Cyber analysis", "Threat intelligence", "Analytical skills", "Security research"],
+      "source": "P16",
+      "reference": "stoll2008adapting",
+      "context": "Security visualization design for analysts",
+      "methodology": "Mixed methods",
+      "fullCitation": "Stoll, John. 'Adapting personas for use in security visualization design.' 2008."
+    },
+    {
+      "id": "P16-2",
+      "name": "Terry Whitter (Intelligence Specialist)",
+      "category": "Security Practitioners",
+      "description": "Intelligence analysis professional with strategic security view and information processing",
+      "attributes": ["Intelligence analysis", "Strategic view", "Information processing", "Security intelligence"],
+      "source": "P16",
+      "reference": "stoll2008adapting",
+      "context": "Security visualization design for analysts",
+      "methodology": "Mixed methods",
+      "fullCitation": "Stoll, John. 'Adapting personas for use in security visualization design.' 2008."
+    },
+    {
+      "id": "P16-3",
+      "name": "Rob McCormick (Safety Officer)",
+      "category": "Security Practitioners",
+      "description": "Safety-focused professional with operational security concerns and risk management",
+      "attributes": ["Safety focus", "Operational security", "Risk management", "Safety protocols"],
+      "source": "P16",
+      "reference": "stoll2008adapting",
+      "context": "Security visualization design for analysts",
+      "methodology": "Mixed methods",
+      "fullCitation": "Stoll, John. 'Adapting personas for use in security visualization design.' 2008."
+    },
+    {
+      "id": "P17-1",
+      "name": "Peter (Tech-Savvy User)",
+      "category": "Knowledge-Attitude Personas",
+      "description": "Technically proficient user with privacy awareness and security consciousness",
+      "attributes": ["Technical proficiency", "Privacy awareness", "Security consciousness", "Informed decisions"],
+      "source": "P17",
+      "reference": "paske2012follow",
+      "context": "Location tracking privacy protection",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Paske, Michael. 'Follow you follow me: Using location tracking to mitigate multi-device privacy threats.' 2012."
+    },
+    {
+      "id": "P17-2",
+      "name": "David (Car Access Exploiter)",
+      "category": "Threat Actors",
+      "description": "Malicious actor targeting automotive systems with exploitation capabilities",
+      "attributes": ["Automotive targeting", "Exploitation skills", "System compromise", "Vehicle security"],
+      "source": "P17",
+      "reference": "paske2012follow",
+      "context": "Location tracking privacy protection",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Paske, Michael. 'Follow you follow me: Using location tracking to mitigate multi-device privacy threats.' 2012."
+    },
+    {
+      "id": "P17-3",
+      "name": "Frankie (Mischief Maker)",
+      "category": "Threat Actors",
+      "description": "Playful threat actor with disruptive but non-malicious intent and curiosity-driven behavior",
+      "attributes": ["Playful disruption", "Non-malicious intent", "Curiosity-driven", "Experimental behavior"],
+      "source": "P17",
+      "reference": "paske2012follow",
+      "context": "Location tracking privacy protection",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Paske, Michael. 'Follow you follow me: Using location tracking to mitigate multi-device privacy threats.' 2012."
+    },
+    {
+      "id": "P17-4",
+      "name": "Justin (Privacy-Unaware User)",
+      "category": "Knowledge-Attitude Personas",
+      "description": "User with low privacy awareness freely sharing location data without consideration",
+      "attributes": ["Low privacy awareness", "Open sharing", "Location data", "Unconscious exposure"],
+      "source": "P17",
+      "reference": "paske2012follow",
+      "context": "Location tracking privacy protection",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Paske, Michael. 'Follow you follow me: Using location tracking to mitigate multi-device privacy threats.' 2012."
+    },
+    {
+      "id": "P18-1",
+      "name": "Logan (White British 8-year-old boy with no siblings)",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Young child with specific demographic and family characteristics affecting privacy needs",
+      "attributes": ["Young child", "No siblings", "British culture", "Family dynamics"],
+      "source": "P18",
+      "reference": "dempsey2022children",
+      "context": "Children's privacy warning design",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Dempsey, Sarah. 'Children designing privacy warnings: Informing a set of design guidelines.' 2022."
+    },
+    {
+      "id": "P18-2",
+      "name": "Vienna (Multiracial 11-year-old with siblings)",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Pre-teen with diverse background and sibling interactions affecting privacy behavior",
+      "attributes": ["Pre-teen", "Multiracial background", "Sibling interactions", "Social development"],
+      "source": "P18",
+      "reference": "dempsey2022children",
+      "context": "Children's privacy warning design",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Dempsey, Sarah. 'Children designing privacy warnings: Informing a set of design guidelines.' 2022."
+    },
+    {
+      "id": "P19-1",
+      "name": "Nauman (Unrestricted)",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Pakistani teen with minimal parental digital restrictions and freedom of access",
+      "attributes": ["Pakistani culture", "Minimal restrictions", "Digital freedom", "Teen autonomy"],
+      "source": "P19",
+      "reference": "mustafa2023pakistani",
+      "context": "Pakistani teens and privacy design",
+      "methodology": "Mixed methods",
+      "fullCitation": "Mustafa, Mariam. 'Pakistani Teens and Privacy-How Gender Disparities, Religion and Family Values Impact the Privacy Design Space.' 2023."
+    },
+    {
+      "id": "P19-2",
+      "name": "Sara (Moderate)",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Pakistani teen with moderate parental oversight and balanced digital access",
+      "attributes": ["Moderate oversight", "Balanced access", "Parental guidance", "Cultural balance"],
+      "source": "P19",
+      "reference": "mustafa2023pakistani",
+      "context": "Pakistani teens and privacy design",
+      "methodology": "Mixed methods",
+      "fullCitation": "Mustafa, Mariam. 'Pakistani Teens and Privacy-How Gender Disparities, Religion and Family Values Impact the Privacy Design Space.' 2023."
+    },
+    {
+      "id": "P19-3",
+      "name": "Farhan (Restricted)",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Pakistani teen with significant parental restrictions on digital activities",
+      "attributes": ["Significant restrictions", "Parental control", "Limited access", "Supervised usage"],
+      "source": "P19",
+      "reference": "mustafa2023pakistani",
+      "context": "Pakistani teens and privacy design",
+      "methodology": "Mixed methods",
+      "fullCitation": "Mustafa, Mariam. 'Pakistani Teens and Privacy-How Gender Disparities, Religion and Family Values Impact the Privacy Design Space.' 2023."
+    },
+    {
+      "id": "P19-4",
+      "name": "Khadija (Highly Restricted)",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Pakistani teen with extensive parental control and monitoring of digital behavior",
+      "attributes": ["Extensive control", "Digital monitoring", "Strict supervision", "Limited autonomy"],
+      "source": "P19",
+      "reference": "mustafa2023pakistani",
+      "context": "Pakistani teens and privacy design",
+      "methodology": "Mixed methods",
+      "fullCitation": "Mustafa, Mariam. 'Pakistani Teens and Privacy-How Gender Disparities, Religion and Family Values Impact the Privacy Design Space.' 2023."
+    },
+    {
+      "id": "P20-1",
+      "name": "Ken Wayne (InfoSec Consultant)",
+      "category": "Security Practitioners",
+      "description": "Information security consulting professional with expertise in security design and communication",
+      "attributes": ["Consulting expertise", "Security design", "Professional communication", "Client education"],
+      "source": "P20",
+      "reference": "lewis2014says",
+      "context": "Using comic strips to design information security personas",
+      "methodology": "Interview",
+      "fullCitation": "Lewis, Sarah. 'Who says personas can't dance? The use of comic strips to design information security personas.' 2014."
+    }
+  ]
+}
+      "id": "P1-1",
+      "name": "Black Hat Troll",
+      "category": "Threat Actors",
+      "description": "Malicious troll with harmful motivations and hacking methods targeting media and political platforms",
+      "attributes": ["Malicious motivations", "Hacking methods", "Media manipulation", "Political targeting"],
+      "source": "P1",
+      "reference": "matthews2019black",
+      "context": "Security vulnerabilities in media politics",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Matthews, John. 'Black hat trolling, white hat trolling, and hacking the attention landscape.' 2019."
+    },
+    {
+      "id": "P1-2", 
+      "name": "Gray Hat Troll",
+      "category": "Threat Actors",
+      "description": "Troll with mixed motivations and moderate harmful behaviors in online spaces",
+      "attributes": ["Mixed motivations", "Moderate harm", "Ambiguous ethics", "Media targeting"],
+      "source": "P1",
+      "reference": "matthews2019black",
+      "context": "Security vulnerabilities in media politics",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Matthews, John. 'Black hat trolling, white hat trolling, and hacking the attention landscape.' 2019."
+    },
+    {
+      "id": "P1-3",
+      "name": "White Hat Troll", 
+      "category": "Threat Actors",
+      "description": "Troll with defensive or educational motivations, using disruption for positive purposes",
+      "attributes": ["Defensive motivations", "Educational intent", "Ethical hacking", "Counter-trolling"],
+      "source": "P1",
+      "reference": "matthews2019black",
+      "context": "Security vulnerabilities in media politics",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Matthews, John. 'Black hat trolling, white hat trolling, and hacking the attention landscape.' 2019."
+    },
+    {
+      "id": "P2-1",
+      "name": "Security Team",
+      "category": "Security Practitioners",
+      "description": "Professional security team member in organizational context responsible for threat assessment",
+      "attributes": ["Professional role", "Team collaboration", "Threat assessment", "Organizational security"],
+      "source": "P2",
+      "reference": "bhattarai2016information",
+      "context": "Understanding needs of security applications users",
+      "methodology": "Proto-persona as agile method",
+      "fullCitation": "Bhattarai, Suraj. 'Information security application design: understanding your users.' 2016."
+    },
+    {
+      "id": "P2-2",
+      "name": "IT Team",
+      "category": "Security Practitioners", 
+      "description": "IT professional with technical system responsibilities and infrastructure management",
+      "attributes": ["Technical expertise", "System administration", "Infrastructure management", "Technical support"],
+      "source": "P2",
+      "reference": "bhattarai2016information",
+      "context": "Understanding needs of security applications users",
+      "methodology": "Proto-persona as agile method",
+      "fullCitation": "Bhattarai, Suraj. 'Information security application design: understanding your users.' 2016."
+    },
+    {
+      "id": "P2-3",
+      "name": "Policy Team",
+      "category": "Security Practitioners",
+      "description": "Policy-focused professional handling security governance and compliance",
+      "attributes": ["Policy development", "Governance", "Compliance", "Risk management"],
+      "source": "P2", 
+      "reference": "bhattarai2016information",
+      "context": "Understanding needs of security applications users",
+      "methodology": "Proto-persona as agile method",
+      "fullCitation": "Bhattarai, Suraj. 'Information security application design: understanding your users.' 2016."
+    },
+    {
+      "id": "P2-4",
+      "name": "Security Reseller",
+      "category": "Security Practitioners",
+      "description": "Commercial security solution provider focused on sales and implementation",
+      "attributes": ["Commercial focus", "Sales expertise", "Solution implementation", "Client management"],
+      "source": "P2",
+      "reference": "bhattarai2016information", 
+      "context": "Understanding needs of security applications users",
+      "methodology": "Proto-persona as agile method",
+      "fullCitation": "Bhattarai, Suraj. 'Information security application design: understanding your users.' 2016."
+    },
+    {
+      "id": "P3-1",
+      "name": "Sports Buff",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Sports enthusiast with specific interests and mobile app usage patterns",
+      "attributes": ["Sports interests", "Mobile usage", "Social sharing", "Event tracking"],
+      "source": "P3",
+      "reference": "liang2015papdroid",
+      "context": "Personalized privacy awareness for Android users",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Liang, Xiaohong. 'PAPDroid: Personalization Awareness Privacy Protection in Android.' 2015."
+    },
+    {
+      "id": "P3-2",
+      "name": "Entertainment Enthusiast", 
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Entertainment-focused user with media consumption preferences and streaming habits",
+      "attributes": ["Media consumption", "Streaming habits", "Content preferences", "Social media use"],
+      "source": "P3",
+      "reference": "liang2015papdroid",
+      "context": "Personalized privacy awareness for Android users",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Liang, Xiaohong. 'PAPDroid: Personalization Awareness Privacy Protection in Android.' 2015."
+    },
+    {
+      "id": "P3-3",
+      "name": "Technophile",
+      "category": "Demographic Specific Persona of Regular Users", 
+      "description": "Technology enthusiast with high tech adoption and early adopter behavior",
+      "attributes": ["Early adopter", "High tech literacy", "Innovation enthusiasm", "Beta testing"],
+      "source": "P3",
+      "reference": "liang2015papdroid",
+      "context": "Personalized privacy awareness for Android users",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Liang, Xiaohong. 'PAPDroid: Personalization Awareness Privacy Protection in Android.' 2015."
+    },
+    {
+      "id": "P3-4",
+      "name": "Travel Buff",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Travel enthusiast with mobility and location-based needs and privacy concerns",
+      "attributes": ["Travel enthusiasm", "Location services", "Mobile payments", "International usage"],
+      "source": "P3",
+      "reference": "liang2015papdroid", 
+      "context": "Personalized privacy awareness for Android users",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Liang, Xiaohong. 'PAPDroid: Personalization Awareness Privacy Protection in Android.' 2015."
+    },
+    {
+      "id": "P3-5",
+      "name": "Business Executive",
+      "category": "Industry Specific Personas",
+      "description": "Corporate executive with business-focused technology use and security requirements",
+      "attributes": ["Business focus", "Leadership role", "Security awareness", "Productivity tools"],
+      "source": "P3",
+      "reference": "liang2015papdroid",
+      "context": "Personalized privacy awareness for Android users",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Liang, Xiaohong. 'PAPDroid: Personalization Awareness Privacy Protection in Android.' 2015."
+    },
+    {
+      "id": "P3-6",
+      "name": "Medical Staff",
+      "category": "Industry Specific Personas",
+      "description": "Healthcare professional with medical industry requirements and patient data concerns",
+      "attributes": ["Healthcare focus", "Patient data", "Compliance requirements", "Professional ethics"],
+      "source": "P3",
+      "reference": "liang2015papdroid",
+      "context": "Personalized privacy awareness for Android users",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Liang, Xiaohong. 'PAPDroid: Personalization Awareness Privacy Protection in Android.' 2015."
+    },
+    {
+      "id": "P3-7",
+      "name": "Retiree",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Retired individual with specific technology adoption patterns and privacy needs",
+      "attributes": ["Limited tech experience", "Privacy conscious", "Fixed income", "Family communication"],
+      "source": "P3",
+      "reference": "liang2015papdroid",
+      "context": "Personalized privacy awareness for Android users",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Liang, Xiaohong. 'PAPDroid: Personalization Awareness Privacy Protection in Android.' 2015."
+    },
+    {
+      "id": "P3-8",
+      "name": "Homemaker",
+      "category": "Demographic Specific Persona of Regular Users",
+      "description": "Home-focused individual with family-oriented technology use and household management needs",
+      "attributes": ["Family focus", "Household management", "Budget conscious", "Child safety"],
+      "source": "P3",
+      "reference": "liang2015papdroid",
+      "context": "Personalized privacy awareness for Android users",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Liang, Xiaohong. 'PAPDroid: Personalization Awareness Privacy Protection in Android.' 2015."
+    },
+    {
+      "id": "P4-1",
+      "name": "Ideologically Motivated Attacker (Martin)",
+      "category": "Threat Actors",
+      "description": "Attacker driven by ideological beliefs and political motivations with sophisticated techniques",
+      "attributes": ["Ideological motivation", "Political goals", "Sophisticated techniques", "Long-term planning"],
+      "source": "P4",
+      "reference": "tariq2012framing",
+      "context": "Framing attackers in organized cybercrime",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Tariq, Muhammad. 'Framing the attacker in organized cybercrime.' 2012."
+    },
+    {
+      "id": "P4-2",
+      "name": "Botnet Developer (Thomas)",
+      "category": "Threat Actors",
+      "description": "Technical specialist focused on botnet creation and management for criminal purposes",
+      "attributes": ["Technical expertise", "Botnet development", "Criminal networks", "Automation skills"],
+      "source": "P4",
+      "reference": "tariq2012framing",
+      "context": "Framing attackers in organized cybercrime",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Tariq, Muhammad. 'Framing the attacker in organized cybercrime.' 2012."
+    },
+    {
+      "id": "P4-3",
+      "name": "Bragger",
+      "category": "Threat Actors",
+      "description": "Attacker motivated by recognition and reputation within hacker communities",
+      "attributes": ["Recognition seeking", "Reputation building", "Community status", "Public demonstrations"],
+      "source": "P4",
+      "reference": "tariq2012framing",
+      "context": "Framing attackers in organized cybercrime",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Tariq, Muhammad. 'Framing the attacker in organized cybercrime.' 2012."
+    },
+    {
+      "id": "P4-4",
+      "name": "Insider",
+      "category": "Threat Actors",
+      "description": "Internal threat actor with privileged access and organizational knowledge",
+      "attributes": ["Privileged access", "Organizational knowledge", "Trust exploitation", "Internal threats"],
+      "source": "P4",
+      "reference": "tariq2012framing",
+      "context": "Framing attackers in organized cybercrime",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Tariq, Muhammad. 'Framing the attacker in organized cybercrime.' 2012."
+    },
+    {
+      "id": "P4-5",
+      "name": "Spy",
+      "category": "Threat Actors",
+      "description": "Intelligence-gathering focused threat actor with espionage capabilities",
+      "attributes": ["Intelligence gathering", "Espionage techniques", "Stealth operations", "Information theft"],
+      "source": "P4",
+      "reference": "tariq2012framing",
+      "context": "Framing attackers in organized cybercrime",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Tariq, Muhammad. 'Framing the attacker in organized cybercrime.' 2012."
+    },
+    {
+      "id": "P4-6",
+      "name": "Financially Motivated Attacker (Kevin)",
+      "category": "Threat Actors",
+      "description": "Profit-driven cybercriminal with financial objectives and monetary focus",
+      "attributes": ["Financial motivation", "Profit focus", "Monetary crimes", "Economic impact"],
+      "source": "P4",
+      "reference": "tariq2012framing",
+      "context": "Framing attackers in organized cybercrime",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Tariq, Muhammad. 'Framing the attacker in organized cybercrime.' 2012."
+    },
+    {
+      "id": "P5-1",
+      "name": "Alina Action (Proactive Teacher)",
+      "category": "Industry Specific Personas",
+      "description": "Proactive educator focused on clear learning mechanics and student engagement",
+      "attributes": ["Proactive approach", "Student engagement", "Clear mechanics", "Educational innovation"],
+      "source": "P5",
+      "reference": "tretow2023prototyping",
+      "context": "Learning analytics dashboards in education",
+      "methodology": "Interview",
+      "fullCitation": "Tretow, Anna. 'Prototyping the Learning Analytics Dashboards of an Adaptive Learning Platform: Faculty Perceptions Versus Designers' Intentions.' 2023."
+    },
+    {
+      "id": "P5-2",
+      "name": "Paul Privacy (Privacy-Conscious Teacher)",
+      "category": "Industry Specific Personas",
+      "description": "Privacy-focused educator concerned with data protection and student privacy",
+      "attributes": ["Privacy focus", "Data protection", "Student privacy", "Ethical concerns"],
+      "source": "P5",
+      "reference": "tretow2023prototyping",
+      "context": "Learning analytics dashboards in education",
+      "methodology": "Interview",
+      "fullCitation": "Tretow, Anna. 'Prototyping the Learning Analytics Dashboards of an Adaptive Learning Platform: Faculty Perceptions Versus Designers' Intentions.' 2023."
+    },
+    {
+      "id": "P5-3",
+      "name": "Niels Novice (Data-Driven Teacher)",
+      "category": "Industry Specific Personas",
+      "description": "Novice teacher interested in data-driven instruction and learning analytics",
+      "attributes": ["Data-driven approach", "Learning analytics", "Teaching innovation", "Evidence-based practice"],
+      "source": "P5",
+      "reference": "tretow2023prototyping",
+      "context": "Learning analytics dashboards in education",
+      "methodology": "Interview",
+      "fullCitation": "Tretow, Anna. 'Prototyping the Learning Analytics Dashboards of an Adaptive Learning Platform: Faculty Perceptions Versus Designers' Intentions.' 2023."
+    },
+    {
+      "id": "P6-1",
+      "name": "Naive Nadia (Unconcerned Banking User)",
+      "category": "Knowledge-Attitude Personas",
+      "description": "Banking user with low security awareness and concern, representing 45% of users",
+      "attributes": ["Low security awareness", "Unconcerned attitude", "Basic banking needs", "Convenience focused"],
+      "source": "P6",
+      "reference": "wodo2020security",
+      "context": "Digital banking systems security analysis",
+      "methodology": "Interview",
+      "fullCitation": "Wodo, Wojciech. 'Security of Digital Banking Systems in Poland: Users Study 2019.' 2020."
+    },
+    {
+      "id": "P6-2",
+      "name": "Fearful Frank (Distrustful User)",
+      "category": "Knowledge-Attitude Personas",
+      "description": "Highly distrustful banking user with security fears, representing 10% of users",
+      "attributes": ["High distrust", "Security fears", "Risk aversion", "Conservative approach"],
+      "source": "P6",
+      "reference": "wodo2020security",
+      "context": "Digital banking systems security analysis",
+      "methodology": "Interview",
+      "fullCitation": "Wodo, Wojciech. 'Security of Digital Banking Systems in Poland: Users Study 2019.' 2020."
+    },
+    {
+      "id": "P6-3",
+      "name": "Reasonable Rick (Balanced User)",
+      "category": "Knowledge-Attitude Personas",
+      "description": "Balanced banking user with moderate security approach, representing 45% of users",
+      "attributes": ["Balanced approach", "Moderate security", "Practical decisions", "Informed choices"],
+      "source": "P6",
+      "reference": "wodo2020security",
+      "context": "Digital banking systems security analysis",
+      "methodology": "Interview",
+      "fullCitation": "Wodo, Wojciech. 'Security of Digital Banking Systems in Poland: Users Study 2019.' 2020."
+    },
+    {
+      "id": "P7-1",
+      "name": "Corrupt Software Developer",
+      "category": "Threat Actors",
+      "description": "Insider threat in software development with malicious intent and system access",
+      "attributes": ["Insider access", "Development skills", "System knowledge", "Corruption potential"],
+      "source": "P7",
+      "reference": "steele2008adversary",
+      "context": "Election security threat modeling",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Steele, Robert. 'Adversary Centered Design: Threat Modeling Using Anti-Scenarios, Anti-Use Cases and Anti-Personas.' 2008."
+    },
+    {
+      "id": "P7-2",
+      "name": "Social Activist",
+      "category": "Threat Actors",
+      "description": "Politically motivated individual targeting election systems for ideological purposes",
+      "attributes": ["Political motivation", "Ideological drive", "System disruption", "Public demonstration"],
+      "source": "P7",
+      "reference": "steele2008adversary",
+      "context": "Election security threat modeling",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Steele, Robert. 'Adversary Centered Design: Threat Modeling Using Anti-Scenarios, Anti-Use Cases and Anti-Personas.' 2008."
+    },
+    {
+      "id": "P7-3",
+      "name": "Professional Hacker",
+      "category": "Threat Actors",
+      "description": "Skilled technical threat actor with advanced capabilities and systematic approach",
+      "attributes": ["Advanced skills", "Professional approach", "Systematic methods", "Technical expertise"],
+      "source": "P7",
+      "reference": "steele2008adversary",
+      "context": "Election security threat modeling",
+      "methodology": "Expert knowledge",
+      "fullCitation": "Steele, Robert. 'Adversary Centered Design: Threat Modeling Using Anti-Scenarios, Anti-Use Cases and Anti-Personas.' 2008."
+    },
+    {
+      "id": "P8-1",
+      "name": "Ben (Experienced Penetration Tester)",
+      "category": "Security Practitioners",
+      "description": "Senior security professional with extensive testing experience and advanced skills",
+      "attributes": ["Senior expertise", "Penetration testing", "Advanced skills", "Security assessment"],
+      "source": "P8",
+      "reference": "faily2021visualising",
+      "context": "Security tensions visualization",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Faily, Shamal. 'Visualising personas as goal models to find security tensions.' 2021."
+    },
+    {
+      "id": "P8-2",
+      "name": "Alex (Junior Security Engineer)",
+      "category": "Security Practitioners",
+      "description": "Entry-level security professional learning the field with basic skills",
+      "attributes": ["Junior level", "Learning focus", "Basic skills", "Skill development"],
+      "source": "P8",
+      "reference": "faily2021visualising",
+      "context": "Security tensions visualization",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Faily, Shamal. 'Visualising personas as goal models to find security tensions.' 2021."
+    },
+    {
+      "id": "P8-3",
+      "name": "George (IT Manager)",
+      "category": "Security Practitioners",
+      "description": "IT management professional overseeing security operations and team coordination",
+      "attributes": ["Management role", "Team coordination", "Operations oversight", "Strategic planning"],
+      "source": "P8",
+      "reference": "faily2021visualising",
+      "context": "Security tensions visualization",
+      "methodology": "Secondary data analysis",
+      "fullCitation": "Faily, Shamal. 'Visualising personas as goal models to find security tensions.' 2021."
+    },
+    {

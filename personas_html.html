@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & Privacy Personas Collection</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            display: block;
+        }
+
+        .controls {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px 15px 50px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .filter-select {
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 16px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .persona-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .persona-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid #667eea;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .persona-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .persona-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .persona-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .persona-category {
+            display: inline-block;
+            padding: 5px 12px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .persona-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .persona-attributes {
+            margin-bottom: 15px;
+        }
+
+        .persona-attributes h4 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .attributes-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .attribute-tag {
+            background: #f8f9fa;
+            color: #495057;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            border: 1px solid #e9ecef;
+        }
+
+        .persona-context {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            color: #666;
+            border-left: 3px solid #667eea;
+        }
+
+        .category-threat { border-left-color: #dc3545; }
+        .category-security { border-left-color: #28a745; }
+        .category-knowledge { border-left-color: #ffc107; }
+        .category-demographic { border-left-color: #17a2b8; }
+        .category-industry { border-left-color: #6f42c1; }
+
+        .no-results {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .reference-info {
+            margin-top: 15px;
+            padding: 10px;
+            background: #e3f2fd;
+            border-radius: 8px;
+            border-left: 3px solid #2196f3;
+        }
+
+        .reference-info strong {
+            color: #1565c0;
+            font-size: 0.9em;
+        }
+
+        .floating-action {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            cursor: pointer;
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .floating-action:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .search-box {
+                max-width: none;
+            }
+            
+            .persona-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 800px;
+            max-height: 80%;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+
+        .close:hover {
+            color: #667eea;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+        }
+
+        .citation {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .citation strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-users"></i> Security & Privacy Personas Collection</h1>
+            <p>A comprehensive collection of 128 personas from security and privacy literature</p>
+            <div class="stats">
+                <div class="stat-card">
+                    <span class="stat-number" id="total-personas">128</span>
+                    <span>Total Personas</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">5</span>
+                    <span>Categories</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">35</span>
+                    <span>Research Papers</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search personas by name, description, or context...">
+            </div>
+            <select id="category-filter" class="filter-select">
+                <option value="">All Categories</option>
+                <option value="Threat Actors">Threat Actors</option>
+                <option value="Security Practitioners">Security Practitioners</option>
+                <option value="Knowledge-Attitude Personas">Knowledge-Attitude Personas</option>
+                <option value="Demographic Specific Persona of Regular Users">Demographic Specific Users</option>
+                <option value="Industry Specific Personas">Industry Specific Personas</option>
+            </select>
+        </div>
+
+        <div id="persona-grid" class="persona-grid">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading personas...</p>
+            </div>
+        </div>
+
+        <div class="no-results" id="no-results" style="display: none;">
+            <i class="fas fa-search"></i>
+            <p>No personas found matching your criteria.</p>
+        </div>
+    </div>
+
+    <button class="floating-action" onclick="scrollToTop()" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modal for detailed persona view -->
+    <div id="persona-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script>
+        let allPersonas = [];
+        let filteredPersonas = [];
+
+        // Load personas data
+        async function loadPersonas() {
+            try {
+                const response = await fetch('personas.json');
+                const data = await response.json();
+                allPersonas = data.personas;
+                filteredPersonas = [...allPersonas];
+                displayPersonas(filteredPersonas);
+                updateStats();
+            } catch (error) {
+                console.error('Error loading personas:', error);
+                document.getElementById('persona-grid').innerHTML = 
+                    '<div class="loading"><p>Error loading personas. Please check that personas.json is available.</p></div>';
+            }
+        }
+
+        // Display personas in the grid
+        function displayPersonas(personas) {
+            const grid = document.getElementById('persona-grid');
+            const noResults = document.getElementById('no-results');
+            
+            if (personas.length === 0) {
+                grid.style.display = 'none';
+                noResults.style.display = 'block';
+                return;
+            }
+            
+            grid.style.display = 'grid';
+            noResults.style.display = 'none';
+            
+            grid.innerHTML = personas.map(persona => createPersonaCard(persona)).join('');
+        }
+
+        // Create individual persona card
+        function createPersonaCard(persona) {
+            const categoryClass = getCategoryClass(persona.category);
+            const attributes = Array.isArray(persona.attributes) ? 
+                persona.attributes.slice(0, 3).map(attr => `<span class="attribute-tag">${attr}</span>`).join('') :
+                '<span class="attribute-tag">No attributes specified</span>';
+            
+            return `
+                <div class="persona-card ${categoryClass}" onclick="showPersonaDetails('${persona.id}')">
+                    <div class="persona-name">
+                        <i class="fas fa-user"></i>
+                        ${persona.name}
+                    </div>
+                    <div class="persona-category">${persona.category}</div>
+                    <div class="persona-description">${persona.description}</div>
+                    <div class="persona-attributes">
+                        <h4>Key Attributes</h4>
+                        <div class="attributes-list">${attributes}</div>
+                    </div>
+                    <div class="persona-context">
+                        <strong>Context:</strong> ${persona.context}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Get CSS class for category
+        function getCategoryClass(category) {
+            switch(category) {
+                case 'Threat Actors': return 'category-threat';
+                case 'Security Practitioners': return 'category-security';
+                case 'Knowledge-Attitude Personas': return 'category-knowledge';
+                case 'Demographic Specific Persona of Regular Users': return 'category-demographic';
+                case 'Industry Specific Personas': return 'category-industry';
+                default: return '';
+            }
+        }
+
+        // Show detailed persona information in modal
+        function showPersonaDetails(personaId) {
+            const persona = allPersonas.find(p => p.id === personaId);
+            if (!persona) return;
+
+            const modalContent = document.getElementById('modal-content');
+            const attributes = Array.isArray(persona.attributes) ? 
+                persona.attributes.map(attr => `<span class="attribute-tag">${attr}</span>`).join('') :
+                '<span class="attribute-tag">No attributes specified</span>';
+
+            modalContent.innerHTML = `
+                <h2><i class="fas fa-user"></i> ${persona.name}</h2>
+                <div class="persona-category">${persona.category}</div>
+                <h3>Description</h3>
+                <p>${persona.description}</p>
+                <h3>Key Attributes</h3>
+                <div class="attributes-list">${attributes}</div>
+                <h3>Context & Application</h3>
+                <p>${persona.context}</p>
+                ${persona.methodology ? `<h3>Creation Methodology</h3><p>${persona.methodology}</p>` : ''}
+                <div class="citation">
+                    <strong>Source Study:</strong> ${persona.source}<br>
+                    <strong>Reference Key:</strong> ${persona.reference}<br>
+                    ${persona.fullCitation ? `<strong>Full Citation:</strong> ${persona.fullCitation}` : ''}
+                </div>
+            `;
+
+            document.getElementById('persona-modal').style.display = 'block';
+        }
+
+        // Filter personas based on search and category
+        function filterPersonas() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const categoryFilter = document.getElementById('category-filter').value;
+
+            filteredPersonas = allPersonas.filter(persona => {
+                const matchesSearch = searchTerm === '' || 
+                    persona.name.toLowerCase().includes(searchTerm) ||
+                    persona.description.toLowerCase().includes(searchTerm) ||
+                    persona.context.toLowerCase().includes(searchTerm) ||
+                    (Array.isArray(persona.attributes) && persona.attributes.some(attr => 
+                        attr.toLowerCase().includes(searchTerm)));
+
+                const matchesCategory = categoryFilter === '' || persona.category === categoryFilter;
+
+                return matchesSearch && matchesCategory;
+            });
+
+            displayPersonas(filteredPersonas);
+            updateStats();
+        }
+
+        // Update statistics
+        function updateStats() {
+            document.getElementById('total-personas').textContent = filteredPersonas.length;
+        }
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Event listeners
+        document.getElementById('search-input').addEventListener('input', filterPersonas);
+        document.getElementById('category-filter').addEventListener('change', filterPersonas);
+
+        // Modal event listeners
+        document.querySelector('.close').addEventListener('click', function() {
+            document.getElementById('persona-modal').style.display = 'none';
+        });
+
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('persona-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Initialize the application
+        loadPersonas();
+    </script>
+</body>
+</html>
