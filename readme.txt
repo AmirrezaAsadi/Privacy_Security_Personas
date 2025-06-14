@@ -60,11 +60,11 @@ We welcome contributions to improve this collection:
 If you use this persona collection in your research, please cite:
 
 ```bibtex
-@article{asadi2024personas,
+@article{asadi2025personas,
   title={What Do Personas Say About Privacy \& Security: a Systematic Literature Review Through Human-AI Collaboration},
   author={Asadi, Amir Reza and Zhang, Yuchong and Said, Hazem},
-  journal={[Journal Name]},
-  year={2024}
+  journal={[In press]},
+  year={2025}
 }
 ```
 
