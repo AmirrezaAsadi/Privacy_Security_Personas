@@ -38,45 +38,7 @@ This collection contains personas from the research paper "What Do Personas Say 
 - Examples of persona methodology in practice
 - Case studies for security awareness training
 
-## Setup Instructions
 
-### Option 1: GitHub Pages (Recommended)
-
-1. Fork this repository
-2. Go to repository Settings > Pages
-3. Select "Deploy from a branch" and choose "main"
-4. Your site will be available at `https://yourusername.github.io/repository-name`
-
-### Option 2: Local Development
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/security-privacy-personas.git
-   cd security-privacy-personas
-   ```
-
-2. Start a local web server:
-   ```bash
-   # Using Python 3
-   python -m http.server 8000
-   
-   # Using Node.js
-   npx serve .
-   
-   # Using PHP
-   php -S localhost:8000
-   ```
-
-3. Open `http://localhost:8000` in your browser
-
-## File Structure
-
-```
-├── index.html          # Main webpage
-├── personas.json       # Persona data
-├── README.md          # This file
-└── LICENSE            # License information
-```
 
 ## Data Source
 
