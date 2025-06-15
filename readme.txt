@@ -72,19 +72,9 @@ If you use this persona collection in your research, please cite:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
 
-- Research conducted at University of Cincinnati and KTH Royal Institute of Technology
-- Based on systematic review of 35 academic papers
-- Developed through Human-AI collaboration methodology
 
-## Contact
 
-For questions about this collection or the underlying research:
-
-- **Amir Reza Asadi** - asadiaa@mail.uc.edu
-- **Yuchong Zhang** - yuchongz@kth.se  
-- **Hazem Said** - saidhm@ucmail.uc.edu
 
 ---
 
