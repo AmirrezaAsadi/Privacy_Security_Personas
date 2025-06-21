@@ -75,6 +75,10 @@
             display: block;
         }
 
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+
         .controls {
             display: flex;
             gap: 20px;
@@ -371,20 +375,20 @@
                 <small>University of Cincinnati & KTH Royal Institute of Technology</small>
             </p>
             <div class="stats">
-            <div class="stat-card">
-                <span class="stat-number" id="total-personas">128</span>
-                <span>Total Personas</span>
+                <div class="stat-card">
+                    <span class="stat-number" id="total-personas">128</span>
+                    <span>Total Personas</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">5</span>
+                    <span>Categories</span>
+                </div>
+                <div class="stat-card" onclick="showBibliography()" style="cursor: pointer; transition: transform 0.3s ease;">
+                    <span class="stat-number">35</span>
+                    <span>Research Papers</span>
+                    <small style="display: block; margin-top: 5px; opacity: 0.9;">📖 Click to view all</small>
+                </div>
             </div>
-            <div class="stat-card">
-                <span class="stat-number">5</span>
-                <span>Categories</span>
-            </div>
-            <div class="stat-card" onclick="showBibliography()" style="cursor: pointer; transition: transform 0.3s ease;">
-                <span class="stat-number">35</span>
-                <span>Research Papers</span>
-                <small style="display: block; margin-top: 5px; opacity: 0.9;">📖 Click to view all</small>
-            </div>
-        </div>
         </div>
 
         <div class="controls">
@@ -454,9 +458,119 @@
         </div>
     </div>
 
+    <!-- Modal for bibliography -->
+    <div id="bibliography-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="bibliography-content">
+                <h2><i class="fas fa-book-open"></i> Primary Research Papers (35 Studies)</h2>
+                <p style="margin-bottom: 20px; color: #666;">All research papers used in the systematic literature review for persona extraction:</p>
+                <div id="bibliography-list" style="max-height: 60vh; overflow-y: auto;">
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading bibliography...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         let allPersonas = [];
         let filteredPersonas = [];
+
+        // Show bibliography modal
+        function showBibliography() {
+            loadBibliography();
+            document.getElementById('bibliography-modal').style.display = 'block';
+        }
+
+        // Load bibliography from personas.bib file
+        async function loadBibliography() {
+            try {
+                const response = await fetch('personas.bib');
+                const bibText = await response.text();
+                const papers = parseBibliography(bibText);
+                displayBibliography(papers);
+            } catch (error) {
+                console.error('Error loading bibliography:', error);
+                document.getElementById('bibliography-list').innerHTML = 
+                    '<div class="loading"><p>Error loading bibliography. Please check that personas.bib is available.</p></div>';
+            }
+        }
+
+        // Parse BibTeX bibliography
+        function parseBibliography(bibText) {
+            const papers = [];
+            const entries = bibText.split('@').filter(entry => entry.trim().length > 0);
+            
+            entries.forEach(entry => {
+                if (entry.includes('article') || entry.includes('inproceedings')) {
+                    const paper = {};
+                    
+                    // Extract key
+                    const keyMatch = entry.match(/(?:article|inproceedings)\{([^,]+),/);
+                    if (keyMatch) paper.key = keyMatch[1];
+                    
+                    // Extract title
+                    const titleMatch = entry.match(/title\s*=\s*\{([^}]+)\}/);
+                    if (titleMatch) paper.title = titleMatch[1];
+                    
+                    // Extract author
+                    const authorMatch = entry.match(/author\s*=\s*\{([^}]+)\}/);
+                    if (authorMatch) paper.author = authorMatch[1];
+                    
+                    // Extract year
+                    const yearMatch = entry.match(/year\s*=\s*\{([^}]+)\}/);
+                    if (yearMatch) paper.year = yearMatch[1];
+                    
+                    // Extract journal
+                    const journalMatch = entry.match(/journal\s*=\s*\{([^}]+)\}/);
+                    if (journalMatch) paper.journal = journalMatch[1];
+                    
+                    // Extract booktitle
+                    const booktitleMatch = entry.match(/booktitle\s*=\s*\{([^}]+)\}/);
+                    if (booktitleMatch) paper.booktitle = booktitleMatch[1];
+                    
+                    if (paper.key && paper.title && paper.author) {
+                        papers.push(paper);
+                    }
+                }
+            });
+            
+            return papers.sort((a, b) => (a.author || '').localeCompare(b.author || ''));
+        }
+
+        // Display bibliography in modal
+        function displayBibliography(papers) {
+            const listElement = document.getElementById('bibliography-list');
+            
+            if (papers.length === 0) {
+                listElement.innerHTML = '<div class="loading"><p>No papers found in bibliography.</p></div>';
+                return;
+            }
+            
+            const paperItems = papers.map((paper, index) => `
+                <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #667eea; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div style="font-weight: bold; color: #333; margin-bottom: 8px; font-size: 1.1em;">
+                        ${paper.title}
+                    </div>
+                    <div style="color: #666; margin-bottom: 6px;">
+                        <i class="fas fa-user"></i> <strong>Author(s):</strong> ${paper.author}
+                    </div>
+                    <div style="color: #666; margin-bottom: 6px;">
+                        <i class="fas fa-calendar"></i> <strong>Year:</strong> ${paper.year}
+                    </div>
+                    ${paper.journal ? `<div style="color: #666; margin-bottom: 6px;"><i class="fas fa-journal-whills"></i> <strong>Journal:</strong> ${paper.journal}</div>` : ''}
+                    ${paper.booktitle ? `<div style="color: #666; margin-bottom: 6px;"><i class="fas fa-book"></i> <strong>Conference:</strong> ${paper.booktitle}</div>` : ''}
+                    <div style="font-size: 0.8em; color: #999; margin-top: 10px; font-family: monospace;">
+                        <strong>BibTeX Key:</strong> ${paper.key}
+                    </div>
+                </div>
+            `).join('');
+            
+            listElement.innerHTML = paperItems;
+        }
 
         // Load personas data
         async function loadPersonas() {
@@ -596,14 +710,15 @@
         document.getElementById('category-filter').addEventListener('change', filterPersonas);
 
         // Modal event listeners
-        document.querySelector('.close').addEventListener('click', function() {
-            document.getElementById('persona-modal').style.display = 'none';
+        document.querySelectorAll('.close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', function() {
+                this.closest('.modal').style.display = 'none';
+            });
         });
 
         window.addEventListener('click', function(event) {
-            const modal = document.getElementById('persona-modal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
             }
         });
 
