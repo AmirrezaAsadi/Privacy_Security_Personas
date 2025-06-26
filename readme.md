@@ -63,7 +63,7 @@ If you use this persona collection in your research, please cite:
 @article{asadi2025personas,
   title={What Do Personas Say About Privacy \& Security: a Systematic Literature Review Through Human-AI Collaboration},
   author={Asadi, Amir Reza and Zhang, Yuchong and Said, Hazem},
-  journal={[In press]},
+  journal={[In Review]},
   year={2025}
 }
 ```
