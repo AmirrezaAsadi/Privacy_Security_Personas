@@ -227,6 +227,34 @@
             font-size: 0.9em;
             color: #666;
             border-left: 3px solid #667eea;
+            margin-bottom: 15px;
+        }
+
+        .persona-reference {
+            background: #e3f2fd;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.85em;
+            color: #1565c0;
+            border-left: 3px solid #2196f3;
+            margin-top: 10px;
+        }
+
+        .persona-reference strong {
+            color: #0d47a1;
+        }
+
+        .reference-clickable {
+            cursor: pointer;
+            text-decoration: underline;
+            color: #1976d2;
+        }
+
+        .reference-clickable:hover {
+            color: #0d47a1;
+            background-color: rgba(25, 118, 210, 0.1);
+            padding: 2px 4px;
+            border-radius: 4px;
         }
 
         .category-threat { border-left-color: #dc3545; }
@@ -240,19 +268,6 @@
             padding: 50px;
             color: #666;
             font-size: 1.2em;
-        }
-
-        .reference-info {
-            margin-top: 15px;
-            padding: 10px;
-            background: #e3f2fd;
-            border-radius: 8px;
-            border-left: 3px solid #2196f3;
-        }
-
-        .reference-info strong {
-            color: #1565c0;
-            font-size: 0.9em;
         }
 
         .floating-action {
@@ -363,12 +378,31 @@
         .citation strong {
             color: #333;
         }
+
+        .reference-details {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #28a745;
+        }
+
+        .reference-details h4 {
+            color: #155724;
+            margin-bottom: 10px;
+        }
+
+        .reference-meta {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1><i class="fas fa-users"></i> Directory of  Security & Privacy Personas(Crash Dummies)</h1>
+            <h1><i class="fas fa-users"></i> Directory of Security & Privacy Personas(Crash Dummies)</h1>
             <p style="font-size: 0.9em; color: #555; margin-top: 10px;">
                 Collected in : <em>"What Do Personas Say About Privacy & Security: a Systematic Literature Review Through Human-AI Collaboration"</em><br>
                 <strong>Authors:</strong> <a href="http://linkedin.com/in/amirreza1asadi/" target="_blank" style="color: #667eea; text-decoration: none;">Amir Reza Asadi</a>, Yuchong Zhang, Hazem Said<br>
@@ -394,7 +428,7 @@
         <div class="controls">
             <div class="search-box">
                 <i class="fas fa-search"></i>
-                <input type="text" id="search-input" placeholder="Search personas by name, description, or context...">
+                <input type="text" id="search-input" placeholder="Search personas by name, description, reference, or context...">
             </div>
             <select id="category-filter" class="filter-select">
                 <option value="">All Categories</option>
@@ -475,9 +509,18 @@
         </div>
     </div>
 
+    <!-- Modal for reference details -->
+    <div id="reference-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="reference-content"></div>
+        </div>
+    </div>
+
     <script>
         let allPersonas = [];
         let filteredPersonas = [];
+        let bibliographyData = {};
 
         // Show bibliography modal
         function showBibliography() {
@@ -491,6 +534,12 @@
                 const response = await fetch('personas.bib');
                 const bibText = await response.text();
                 const papers = parseBibliography(bibText);
+                
+                // Store bibliography data for reference lookup
+                papers.forEach(paper => {
+                    bibliographyData[paper.key] = paper;
+                });
+                
                 displayBibliography(papers);
             } catch (error) {
                 console.error('Error loading bibliography:', error);
@@ -572,6 +621,40 @@
             listElement.innerHTML = paperItems;
         }
 
+        // Show reference details in modal
+        function showReferenceDetails(referenceKey) {
+            const paper = bibliographyData[referenceKey];
+            const modal = document.getElementById('reference-modal');
+            const content = document.getElementById('reference-content');
+            
+            if (paper) {
+                content.innerHTML = `
+                    <h2><i class="fas fa-book"></i> Reference Details</h2>
+                    <div class="reference-details">
+                        <h4>${paper.title}</h4>
+                        <div style="margin: 10px 0;">
+                            <strong><i class="fas fa-user"></i> Author(s):</strong> ${paper.author}
+                        </div>
+                        <div style="margin: 10px 0;">
+                            <strong><i class="fas fa-calendar"></i> Year:</strong> ${paper.year}
+                        </div>
+                        ${paper.journal ? `<div style="margin: 10px 0;"><strong><i class="fas fa-journal-whills"></i> Journal:</strong> ${paper.journal}</div>` : ''}
+                        ${paper.booktitle ? `<div style="margin: 10px 0;"><strong><i class="fas fa-book"></i> Conference:</strong> ${paper.booktitle}</div>` : ''}
+                        <div class="reference-meta">
+                            <strong>BibTeX Key:</strong> <code>${paper.key}</code>
+                        </div>
+                    </div>
+                `;
+            } else {
+                content.innerHTML = `
+                    <h2><i class="fas fa-exclamation-triangle"></i> Reference Not Found</h2>
+                    <p>Could not find details for reference key: <code>${referenceKey}</code></p>
+                `;
+            }
+            
+            modal.style.display = 'block';
+        }
+
         // Load personas data
         async function loadPersonas() {
             try {
@@ -579,6 +662,10 @@
                 const data = await response.json();
                 allPersonas = data.personas;
                 filteredPersonas = [...allPersonas];
+                
+                // Load bibliography first to enable reference lookup
+                await loadBibliography();
+                
                 displayPersonas(filteredPersonas);
                 updateStats();
             } catch (error) {
@@ -605,12 +692,33 @@
             grid.innerHTML = personas.map(persona => createPersonaCard(persona)).join('');
         }
 
-        // Create individual persona card
+        // Create individual persona card with reference information
         function createPersonaCard(persona) {
             const categoryClass = getCategoryClass(persona.category);
             const attributes = Array.isArray(persona.attributes) ? 
                 persona.attributes.slice(0, 3).map(attr => `<span class="attribute-tag">${attr}</span>`).join('') :
                 '<span class="attribute-tag">No attributes specified</span>';
+            
+            // Get reference information
+            const referenceInfo = bibliographyData[persona.reference];
+            let referenceDisplay = '';
+            
+            if (referenceInfo) {
+                referenceDisplay = `
+                    <div class="persona-reference">
+                        <strong><i class="fas fa-book-open"></i> Reference:</strong><br>
+                        <span class="reference-clickable" onclick="showReferenceDetails('${persona.reference}')" title="Click for full reference details">
+                            ${referenceInfo.author} (${referenceInfo.year}). ${referenceInfo.title}
+                        </span>
+                    </div>
+                `;
+            } else {
+                referenceDisplay = `
+                    <div class="persona-reference">
+                        <strong><i class="fas fa-book"></i> Reference Key:</strong> ${persona.reference}
+                    </div>
+                `;
+            }
             
             return `
                 <div class="persona-card ${categoryClass}" onclick="showPersonaDetails('${persona.id}')">
@@ -627,6 +735,7 @@
                     <div class="persona-context">
                         <strong>Context:</strong> ${persona.context}
                     </div>
+                    ${referenceDisplay}
                 </div>
             `;
         }
@@ -653,6 +762,40 @@
                 persona.attributes.map(attr => `<span class="attribute-tag">${attr}</span>`).join('') :
                 '<span class="attribute-tag">No attributes specified</span>';
 
+            // Get full reference information
+            const referenceInfo = bibliographyData[persona.reference];
+            let fullReferenceDisplay = '';
+            
+            if (referenceInfo) {
+                fullReferenceDisplay = `
+                    <div class="reference-details">
+                        <h4><i class="fas fa-book-open"></i> Full Reference</h4>
+                        <div style="margin: 10px 0;">
+                            <strong>Title:</strong> ${referenceInfo.title}
+                        </div>
+                        <div style="margin: 10px 0;">
+                            <strong>Author(s):</strong> ${referenceInfo.author}
+                        </div>
+                        <div style="margin: 10px 0;">
+                            <strong>Year:</strong> ${referenceInfo.year}
+                        </div>
+                        ${referenceInfo.journal ? `<div style="margin: 10px 0;"><strong>Journal:</strong> ${referenceInfo.journal}</div>` : ''}
+                        ${referenceInfo.booktitle ? `<div style="margin: 10px 0;"><strong>Conference:</strong> ${referenceInfo.booktitle}</div>` : ''}
+                        <div class="reference-meta">
+                            <strong>BibTeX Key:</strong> <code>${persona.reference}</code>
+                        </div>
+                    </div>
+                `;
+            } else {
+                fullReferenceDisplay = `
+                    <div class="citation">
+                        <strong>Source Study:</strong> ${persona.source}<br>
+                        <strong>Reference Key:</strong> ${persona.reference}<br>
+                        ${persona.fullCitation ? `<strong>Full Citation:</strong> ${persona.fullCitation}` : ''}
+                    </div>
+                `;
+            }
+
             modalContent.innerHTML = `
                 <h2><i class="fas fa-user"></i> ${persona.name}</h2>
                 <div class="persona-category">${persona.category}</div>
@@ -663,11 +806,7 @@
                 <h3>Context & Application</h3>
                 <p>${persona.context}</p>
                 ${persona.methodology ? `<h3>Creation Methodology</h3><p>${persona.methodology}</p>` : ''}
-                <div class="citation">
-                    <strong>Source Study:</strong> ${persona.source}<br>
-                    <strong>Reference Key:</strong> ${persona.reference}<br>
-                    ${persona.fullCitation ? `<strong>Full Citation:</strong> ${persona.fullCitation}` : ''}
-                </div>
+                ${fullReferenceDisplay}
             `;
 
             document.getElementById('persona-modal').style.display = 'block';
@@ -679,10 +818,17 @@
             const categoryFilter = document.getElementById('category-filter').value;
 
             filteredPersonas = allPersonas.filter(persona => {
+                const referenceInfo = bibliographyData[persona.reference];
+                const referenceText = referenceInfo ? 
+                    `${referenceInfo.title} ${referenceInfo.author} ${referenceInfo.year}`.toLowerCase() : 
+                    persona.reference.toLowerCase();
+
                 const matchesSearch = searchTerm === '' || 
                     persona.name.toLowerCase().includes(searchTerm) ||
                     persona.description.toLowerCase().includes(searchTerm) ||
                     persona.context.toLowerCase().includes(searchTerm) ||
+                    persona.source.toLowerCase().includes(searchTerm) ||
+                    referenceText.includes(searchTerm) ||
                     (Array.isArray(persona.attributes) && persona.attributes.some(attr => 
                         attr.toLowerCase().includes(searchTerm)));
 
